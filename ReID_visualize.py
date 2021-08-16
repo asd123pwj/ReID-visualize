@@ -1,5 +1,4 @@
 import cv2 as cv
-import re
 import os
 from matplotlib import pyplot as plt
 
@@ -26,7 +25,7 @@ class Visualization:
         self._output_name = ""
         self._output_img = None
 
-    def help():
+    def help(self):
         help = """
         #   code sample
         #   代码示例
@@ -174,3 +173,4 @@ class Visualization:
         self._save_log()
         output_path = os.path.join(self._output_path, (self._output_name + '.jpg'))
         plt.savefig(output_path, bbox_inches='tight')
+        plt.clf()
